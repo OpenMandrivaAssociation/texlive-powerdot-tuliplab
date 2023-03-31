@@ -1,6 +1,6 @@
 Name:		texlive-powerdot-tuliplab
 Version:	47963
-Release:	1
+Release:	2
 Summary:	A style package for Powerdot to provide the design of TULIP Lab
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/powerdot-tuliplab
