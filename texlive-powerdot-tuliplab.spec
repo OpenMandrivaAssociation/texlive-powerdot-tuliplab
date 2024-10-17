@@ -3,7 +3,7 @@ Version:	47963
 Release:	2
 Summary:	A style package for Powerdot to provide the design of TULIP Lab
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/powerdot-tuliplab
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/powerdot-tuliplab
 License:	lppl1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/powerdot-tuliplab.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/powerdot-tuliplab.doc.r%{version}.tar.xz
