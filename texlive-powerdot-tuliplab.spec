@@ -1,37 +1,22 @@
-Name:		texlive-powerdot-tuliplab
-Version:	47963
-Release:	2
+%global tl_name powerdot-tuliplab
+%global tl_revision 47963
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	1.0.0
+Release:	%{tl_revision}.1
 Summary:	A style package for Powerdot to provide the design of TULIP Lab
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/powerdot-tuliplab
 License:	lppl1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/powerdot-tuliplab.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/powerdot-tuliplab.doc.r%{version}.tar.xz
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/powerdot-tuliplab.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/powerdot-tuliplab.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+BuildSystem:	texlive
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
 powerdot-tuliplab is the LaTeX package used in TULIP Lab for
-presentation drafting. It comes with several sample .tex files
-so that you can quickly start working with it.
+presentation drafting. It comes with several sample .tex files so that
+you can quickly start working with it.
 
-%prep
-%autosetup -p1 -c -a1
-
-%build
-
-%install
-rm -rf tlpkg
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -a * %{buildroot}%{_texmfdistdir}
-
-%files
-%{_texmfdistdir}/tex/latex/powerdot-tuliplab
-%doc %{_texmfdistdir}/doc/latex/powerdot-tuliplab
-
-%post -p %{_sbindir}/texlive.post
-
-%postun
-[ "$1" -eq 0 ] && %{_sbindir}/texlive.post
